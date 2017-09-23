@@ -15,29 +15,13 @@ public static ArrayList<Fornecedor> getList(){
     if(list==null){
     list = new ArrayList<>();
     Fornecedor f1 =new Fornecedor();
-    f1.setNome("fulano");
-    f1.setRazao("razaofulano");
-    f1.setCnpj("88.888.888/0001-88");
-    f1.setEmail("fulano@gmail.com");
-    f1.setTelefone("13 9 8888-8888");
-    f1.setEndereco("Rua-888");
+    f1.setNome("Exemplo");
+    f1.setRazao("Exemplo LTDA");
+    f1.setCnpj("XX.XXX.XXX/XXX-XX");
+    f1.setEmail("exemplo@gmail.com");
+    f1.setTelefone("XX X XXXX-XXXX");
+    f1.setEndereco("Rua:XXXX, Numero:XXX, Complemmento: XX");
     list.add(f1);
-    Fornecedor f2 =new Fornecedor();
-    f2.setNome("fulano");
-    f2.setCnpj("razaofulano");
-    f2.setCnpj("88.888.888/0001-88");
-    f2.setEmail("fulano@gmail.com");
-    f2.setTelefone("13 9 8888-8888");
-    f2.setEndereco("Rua-888");
-    list.add(f2);
-    Fornecedor f3 =new Fornecedor();
-    f3.setNome("fulano");
-    f3.setRazao("Razaofulano");
-    f3.setCnpj("88.888.888/0001-88");
-    f3.setEmail("fulano@gmail.com");
-    f3.setTelefone("13 9 8888-8888");
-    f3.setEndereco("Rua-888");
-    list.add(f3);
     }
 return list;
 }

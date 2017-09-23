@@ -1,6 +1,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.com.fatecpg.oo.Fornecedor"%>
+<%@page import="br.com.fatec.poo.Fornecedor"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +9,33 @@
     </head>
     <body>
           <h1>Fornecedores</h1>
+           <%
+            try{
+            if(request.getParameter("remove")!=null){
+    int i = Integer.parseInt(request.getParameter("index"));
+     //remove contatos        
+    Fornecedor.getList().remove(i);}
+            else if((request.getParameter("add")!=null)){
+                String nome = request.getParameter("nome");
+                 String razao = request.getParameter("razao");
+                  String cnpj = request.getParameter("cnpj");
+                   String email = request.getParameter("email");
+                    String telefone = request.getParameter("telefone");
+                     String endereco = request.getParameter("endereco");
+                  Fornecedor c = new Fornecedor();
+                  c.setNome(nome);
+                  c.setRazao(razao);
+                  c.setCnpj(cnpj);
+                  c.setEmail(email);
+                  c.setTelefone(telefone);
+                  c.setEndereco(endereco);
+                  Fornecedor.getList().add(c);
+                  response.sendRedirect(request.getRequestURI());}
+    
+            }catch(Exception ex){
+    %>
+        <div>Erro ao processar form! </div>
+    <%}%>
     table border ="1">
             <tr>
                 <th>índice</th>
@@ -23,16 +50,16 @@
             <h2>Novo Fornecedor</h2>
             <form>
                 Empresa:<br/>
-                <input type="text" name="nome"/>
-                Razão Social:<br/>
-                <input type="text" name="razao"/>
-                CNPJ:<br/>
-                <input type="text" name="cnpj"/>
-                Email:<br/>
-                <input type="text" name="email"/>
-                Telefone:<br/>
-                <input type="text" name="telefone"/>
-                Endereço:<br/>
+                <input type="text" name="nome"/><br/>
+                Razão Social:
+                <input type="text" name="razao"/><br/>
+                CNPJ:
+                <input type="text" name="cnpj"/><br/>
+                Email:
+                <input type="text" name="email"/><br/>
+                Telefone:
+                <input type="text" name="telefone"/><br/>
+                Endereço:
                 <input type="text" name="endereco"/><br/>
                 <input type="submit" name="add" value="adcionar"/>
             </form>

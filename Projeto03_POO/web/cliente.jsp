@@ -1,14 +1,39 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.com.fatecpg.oo.Cliente"%>
+<%@page import="br.com.fatec.poo.Cliente"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Clientes</title>
     </head>
     <body>
           <h1>Cliente</h1>
-    table border ="1">
+           <%
+            try{
+            if(request.getParameter("remove")!=null){
+    int i = Integer.parseInt(request.getParameter("index"));
+     //remove contatos        
+    Cliente.getList().remove(i);}
+            else if((request.getParameter("add")!=null)){
+                String nome = request.getParameter("nome");
+                 String rg = request.getParameter("rg");
+                  String email = request.getParameter("email");
+                   String telefone = request.getParameter("telefone");
+                    String endereco = request.getParameter("endereco");
+                  Cliente c = new Cliente();
+                  c.setNome(nome);
+                  c.setRg(rg);
+                  c.setEmail(email);
+                  c.setTelefone(telefone);
+                  c.setEndereco(endereco);
+                  Cliente.getList().add(c);
+                  response.sendRedirect(request.getRequestURI());}
+  
+            }catch(Exception ex){
+    %>
+        <div>Erro ao processar form! </div>
+    <%}%>
+    <table border ="1">
             <tr>
                 <th>índice</th>
                  <th>Nome</th>
@@ -16,19 +41,20 @@
                     <th>email</th>
                      <th>Telefone</th>
                       <th>Endereço</th>
+                        <th>Exclusão</th>
             </tr>
           
             <h2>Novo Cliente</h2>
             <form>
-                Nome:<br/>
-                <input type="text" name="nome"/>
-                RG:<br/>
-                <input type="text" name="rg"/>
-                Email:<br/>
-                <input type="text" name="email"/>
-                Telefone:<br/>
-                <input type="text" name="telefone"/>
-                Endereço:<br/>
+                Nome:
+                <input type="text" name="nome"/><br/>
+                RG:
+                <input type="text" name="rg"/><br/>
+                Email:
+                <input type="text" name="email"/><br/>
+                Telefone:
+                <input type="text" name="telefone"/><br/>
+                Endereço:
                 <input type="text" name="endereco"/><br/>
                 <input type="submit" name="add" value="adcionar"/>
             </form>

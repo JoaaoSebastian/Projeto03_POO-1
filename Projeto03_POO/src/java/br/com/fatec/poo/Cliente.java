@@ -15,26 +15,12 @@ public static ArrayList<Cliente> getList(){
     if(list==null){
     list = new ArrayList<>();
     Cliente c1 =new Cliente();
-    c1.setNome("fulano");
-    c1.setRg("88.888.888-8");
-    c1.setEmail("fulano@gmail.com");
-    c1.setTelefone("13 9 8888-8888");
-    c1.setEndereco("Rua-888");
+    c1.setNome("Exemplo");
+    c1.setRg("XX-XXX-XXX-X");
+    c1.setEmail("exemplo@gmail.com");
+    c1.setTelefone("XX X XXXX-XXXX");
+    c1.setEndereco("Rua:XXXX, Numero:XXX, Complemmento: XX");
     list.add(c1);
-    Cliente c2 =new Cliente();
-    c2.setNome("fulano");
-    c2.setRg("88.888.888-8");
-    c2.setEmail("fulano@gmail.com");
-    c2.setTelefone("13 9 8888-8888");
-    c2.setEndereco("Rua-888");
-    list.add(c2);
-    Cliente c3 =new Cliente();
-    c3.setNome("fulano");
-    c3.setRg("88.888.888-8");
-    c3.setEmail("fulano@gmail.com");
-    c3.setTelefone("13 9 8888-8888");
-    c3.setEndereco("Rua-888");
-    list.add(c3);
     }
 return list;
 }
