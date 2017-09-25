@@ -1,10 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="br.com.fatec.poo.Fornecedor"%>
+<%@include file="WEB-INF/menu.jspf" %>
 <!DOCTYPE html>
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Alterar Fornecedor</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
     </head>
     
         <% int i = Integer.parseInt(request.getParameter("index"));
@@ -31,20 +33,20 @@
             %>Não foi possivel alterar<%
         }
         %>
-        <h1>Alterar Cliente</h1>
+        <h1>Alterar Fornecedor</h1>
         <form>
             <input type="hidden" name="index" value="<%=i%>">
-            Nome:
+            <label>Nome:</label>
             <input type="text" name="nome" value="<%=Fornecedor.getList().get(i).getNome()%>"/><br/>
-            Razão:
+            <label>Razão Social:</label>
             <input type="text" name="razao" value="<%=Fornecedor.getList().get(i).getRazao()%>" /></><br/>
-            CNPJ:
+            <label>CNPJ:</label>
             <input type="text" name="cnpj" value="<%=Fornecedor.getList().get(i).getCnpj()%>" /></><br/>
-            Email:
+            <label>Email:</label>
             <input type="text" name="email" value="<%=Fornecedor.getList().get(i).getEmail()%>" /></><br/>
-            Telefone:
+            <label>Telefone:</label>
             <input type="text" name="telefone" value="<%=Fornecedor.getList().get(i).getTelefone()%>" /></><br/>
-            Endereço:
+            <label>Endereço:</label>
             <input type="text" name="endereco" value="<%=Fornecedor.getList().get(i).getEndereco()%>" /></><br/>
             <input type="submit" name="mudar" value="Confirmar"/>
         </form>   
