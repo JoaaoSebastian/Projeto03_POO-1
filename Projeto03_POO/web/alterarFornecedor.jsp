@@ -1,9 +1,3 @@
-<%-- 
-    Document   : alterarCliente
-    Created on : 25/09/2017, 12:50:30
-    Author     : vitoria
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="br.com.fatec.poo.Fornecedor"%>
 <!DOCTYPE html>
@@ -42,15 +36,15 @@
             Nome:
             <input type="text" name="nome" value="<%=Fornecedor.getList().get(i).getNome()%>"/><br/>
             Razão:
-            <input type="text" name="razao" value="<%=Fornecedor.getList().get(i).getRazao()%>" /></><br/>
+            <input type="text" name="razao" value="<%=Fornecedor.getList().get(i).getRazao()%>" /><br/>
             CNPJ:
-            <input type="text" name="cnpj" value="<%=Fornecedor.getList().get(i).getCnpj()%>" /></><br/>
+            <input type="text" name="cnpj" value="<%=Fornecedor.getList().get(i).getCnpj()%>" /><br/>
             Email:
-            <input type="text" name="email" value="<%=Fornecedor.getList().get(i).getEmail()%>" /></><br/>
+            <input type="text" name="email" value="<%=Fornecedor.getList().get(i).getEmail()%>" /><br/>
             Telefone:
-            <input type="text" name="telefone" value="<%=Fornecedor.getList().get(i).getTelefone()%>" /></><br/>
+            <input type="text" name="telefone" value="<%=Fornecedor.getList().get(i).getTelefone()%>" /><br/>
             Endereço:
-            <input type="text" name="endereco" value="<%=Fornecedor.getList().get(i).getEndereco()%>" /></><br/>
+            <input type="text" name="endereco" value="<%=Fornecedor.getList().get(i).getEndereco()%>" /><br/>
             <input type="submit" name="mudar" value="Confirmar"/>
         </form>       
     </body>
