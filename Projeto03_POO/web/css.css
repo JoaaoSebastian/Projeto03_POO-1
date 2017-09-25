@@ -74,6 +74,13 @@ h4{
         margin-left:15%;
         float: left;
     }
+    h2{
+        font-size: 1.3em;
+        font-weight: 300;
+        margin-top: 2%;
+        margin-left:15%;
+        float: left;
+    }
 
     form{
         padding: 2%;
@@ -97,9 +104,19 @@ h4{
         margin-left: 5%;
         margin-right: 5%;
     }
-    input[type=submit]{
+input[type=submit]{
     width: 70%;
     margin-left: 15%;
     margin-right: 10%;
+    float: left;
+}
+#addCliente{
+    float: left;
+    width: 100%;
+    z-index: 7;
+    position: relative;
+}
+
+#cliente{
     float: left;
 }
