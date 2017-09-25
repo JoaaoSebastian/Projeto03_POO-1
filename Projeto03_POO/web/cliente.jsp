@@ -14,7 +14,7 @@
                 int i = Integer.parseInt(request.getParameter("index"));
                  //remove contatos        
                 Cliente.getList().remove(i);
-                }
+            }
             else if((request.getParameter("add")!=null)){
                 String nome = request.getParameter("nome");
                 String rg = request.getParameter("rg");
@@ -29,8 +29,7 @@
                       c.setEndereco(endereco);
                       Cliente.getList().add(c);
                   response.sendRedirect(request.getRequestURI());
-            }
-  
+            }  
             }catch(Exception ex){
     %>
         <div>Erro ao processar form! </div>
@@ -47,8 +46,9 @@
                 <input type="text" name="telefone"/><br/>
                 Endereço:
                 <input type="text" name="endereco"/><br/>
-                <input type="submit" name="add" value="adcionar"/>
+                <input type="submit" name="add" value="Adicionar"/>
             </form>
+            <h2>Lista de Clientes</h2>
             <table border ="1">
             <tr>
                 <th>Índice</th>
@@ -59,11 +59,10 @@
                 <th>Endereço</th>
                 <th>Alteração</th>
                 <th>Exclusão</th>
-            </tr>
-         <h2>Lista de Clientes</h2>
-            <%try{%>
-        <%int i=0;%>
-        <%for(Cliente c: Cliente.getList()){%>
+            </tr>         
+        <%try{
+        int i=0;
+        for(Cliente c: Cliente.getList()){%>
         <tr>
             <td><%=i%></td>
             <td><%=c.getNome()%></td>
