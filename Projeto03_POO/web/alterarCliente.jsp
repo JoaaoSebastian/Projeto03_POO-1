@@ -10,14 +10,26 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Alterar Cliente</title>
     </head>
     
         <% int i = Integer.parseInt(request.getParameter("index"));
-        %><%=i%><%
         try{
             if(request.getParameter("mudar") != null){
-                %>aoee<%
+                String nome = request.getParameter("nome");
+                String rg = request.getParameter("rg");
+                String email = request.getParameter("email");
+                String telefone = request.getParameter("telefone");
+                String endereco = request.getParameter("endereco");
+                
+                Cliente.getList().get(i).setNome(nome);
+                Cliente.getList().get(i).setRg(rg);
+                Cliente.getList().get(i).setEmail(email);
+                Cliente.getList().get(i).setTelefone(telefone);
+                Cliente.getList().get(i).setEndereco(endereco);
+                String url = "cliente.jsp";
+                response.sendRedirect(url);
+                
             }
         }catch(Exception ex){
             %>Não foi possivel alterar<%
@@ -25,6 +37,7 @@
         %>
         <h1>Alterar Cliente</h1>
         <form>
+            <input type="hidden" name="index" value="<%=i%>">
                 Nome:
                 <input type="text" name="nome" value="<%=Cliente.getList().get(i).getNome()%>"/><br/>
                 RG:
@@ -37,5 +50,5 @@
                 <input type="text" name="endereco" value="<%=Cliente.getList().get(i).getEndereco()%>" /></><br/>
                 <input type="submit" name="mudar" value="Confirmar"/>
         </form>   
-    
-
+    </body>
+</html>
