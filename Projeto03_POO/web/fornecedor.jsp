@@ -1,11 +1,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="br.com.fatec.poo.Fornecedor"%>
+<%@include file="WEB-INF/menu.jspf" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Fornecedores</title>
+        <link rel="stylesheet" type="text/css" href="css.css">
     </head>
     <body>
           <h1>Fornecedores</h1>
@@ -37,22 +39,25 @@
             }catch(Exception ex){
                  %><div>Erro ao processar form! </div>
             <%}%>
+            <section id="addCliente">
             <h2>Novo Fornecedor</h2>
             <form>
-                Empresa:
+                <label>Empresa:</label>
                 <input type="text" name="nome" required/><br/>
-                Razão Social:
+                <label>Razão Social:</label>
                 <input type="text" name="razao"/><br/>
-                CNPJ:
+                <label>CNPJ:</label>
                 <input type="text" name="cnpj" /><br/>
-                Email:
+                <label>Email:</label>
                 <input type="text" name="email"/><br/>
-                Telefone:
+                <label>Telefone:</label>
                 <input type="text" name="telefone"/><br/>
-                Endereço:
+                <label>Endereço:</label>
                 <input type="text" name="endereco"/><br/>
                 <input type="submit" name="add" value="Adicionar"/>
             </form>
+            </section>
+            <section id="cliente">
          <h2>Lista de Fornecedores</h2>
             <table border ="1">
             <tr>
@@ -97,6 +102,7 @@
             </td>
             <%}%>
         </tr>
-        </table>        
+        </table>  
+            </section>
     </body>
 </html>
