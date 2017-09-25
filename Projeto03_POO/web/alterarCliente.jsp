@@ -32,7 +32,7 @@
                 
             }
         }catch(Exception ex){
-            %>Não foi possivel alterar<%
+            %>Não foi possível alterar<%
         }
         %>
         <h1>Alterar Cliente</h1>
@@ -41,13 +41,13 @@
                 Nome:
                 <input type="text" name="nome" value="<%=Cliente.getList().get(i).getNome()%>"/><br/>
                 RG:
-                <input type="text" name="rg" value="<%=Cliente.getList().get(i).getRg()%>" /></><br/>
+                <input type="text" name="rg" value="<%=Cliente.getList().get(i).getRg()%>" /><br/>
                 Email:
-                <input type="text" name="email" value="<%=Cliente.getList().get(i).getEmail()%>" /></><br/>
+                <input type="text" name="email" value="<%=Cliente.getList().get(i).getEmail()%>" /><br/>
                 Telefone:
-                <input type="text" name="telefone" value="<%=Cliente.getList().get(i).getTelefone()%>" /></><br/>
+                <input type="text" name="telefone" value="<%=Cliente.getList().get(i).getTelefone()%>" /><br/>
                 Endereço:
-                <input type="text" name="endereco" value="<%=Cliente.getList().get(i).getEndereco()%>" /></><br/>
+                <input type="text" name="endereco" value="<%=Cliente.getList().get(i).getEndereco()%>" /><br/>
                 <input type="submit" name="mudar" value="Confirmar"/>
         </form>   
     </body>
