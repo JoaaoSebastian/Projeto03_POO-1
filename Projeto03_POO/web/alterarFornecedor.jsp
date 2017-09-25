@@ -8,7 +8,7 @@
         <title>Alterar Fornecedor</title>
         <link rel="stylesheet" type="text/css" href="css.css">
     </head>
-    
+    <body>
         <% int i = Integer.parseInt(request.getParameter("index"));
         try{
             if(request.getParameter("mudar") != null){
