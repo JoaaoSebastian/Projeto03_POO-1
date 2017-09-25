@@ -48,6 +48,58 @@ h4{
                 color:rgb(0, 0, 0);
                 border-color:rgb(0,0,0);
 	}
-            body {
-                background-color:rgb(115, 115, 115);
-                 }
+
+    html, body{
+        margin: 0;
+        font-family: Arial;
+    }
+    nav{
+      float: right;
+      margin-top: 3%;
+      z-index: 10;
+      width: 25%;
+      position: relative;  
+  }
+
+    a{
+        padding: 1%;
+        padding-right: 2%;
+        float:left;   
+        text-decoration: none;
+    }
+    h1{
+        font-size: 1.5em;
+        font-weight: 300;
+        margin-top: 2%;
+        margin-left:15%;
+        float: left;
+    }
+
+    form{
+        padding: 2%;
+        left: 10%;
+        right: 10%;
+        width: 75%;
+        position: relative;
+        float: left;
+
+    }
+    label{
+        font-size: 1.1em;
+        margin-left: 5%;
+    }
+    input{
+        border-radius: 5px;
+        padding: 1%;
+        margin-top: 1%;
+        margin-bottom: 2%;
+        width: 85%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    input[type=submit]{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 10%;
+    float: left;
+}
