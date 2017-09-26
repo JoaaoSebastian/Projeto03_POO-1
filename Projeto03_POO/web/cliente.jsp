@@ -58,16 +58,16 @@
             </form>
         </section>
         <section id="cliente">
-            <table border ="1">
+            <table border ="1" cellpadding="5px" cellspacing="0" ID="alter">
             <tr>
                 <th>Índice</th>
-                <th>Nome</th>
+                <th class="dif">Nome</th>
                 <th>CPF</th>
-                <th>RG</th>
+                <th class="dif">RG</th>
                 <th>email</th>
-                <th>Telefone</th>
+                <th class="dif">Telefone</th>
                 <th>Endereço</th>
-                <th>Alteração</th>
+                <th class="dif">Alteração</th>
                 <th>Exclusão</th>
             </tr>
          <h2>Lista de Clientes</h2>
