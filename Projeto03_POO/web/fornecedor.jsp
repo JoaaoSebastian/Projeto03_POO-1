@@ -59,16 +59,16 @@
             </section>
             <section id="cliente">
          <h2>Lista de Fornecedores</h2>
-            <table border ="1">
+            <table border ="1" cellpadding="5px" cellspacing="0" ID="alter">
             <tr>
                 <th>Índice</th>
-                <th>Empresa</th>
+                <th class="dif">Empresa</th>
                 <th>Razão Social</th> 
-                <th>CNPJ</th>
+                <th class="dif">CNPJ</th>
                 <th>Email</th>
-                <th>Telefone</th>
+                <th class="dif">Telefone</th>
                 <th>Endereço</th>
-                <th>Alteração</th>
+                <th class="dif">Alteração</th>
                 <th>Exclusão</th>
             </tr>
             <%try{%>
