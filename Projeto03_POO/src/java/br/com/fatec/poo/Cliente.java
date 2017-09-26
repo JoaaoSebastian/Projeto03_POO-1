@@ -17,9 +17,10 @@ public static ArrayList<Cliente> getList(){
     Cliente c1 =new Cliente();
     c1.setNome("Exemplo");
     c1.setRg("XX-XXX-XXX-X");
+    c1.setCpf("XXX.XXX.XXX-XX");
     c1.setEmail("exemplo@gmail.com");
     c1.setTelefone("XX X XXXX-XXXX");
-    c1.setEndereco("Rua:XXXX, Numero:XXX, Complemmento: XX");
+    c1.setEndereco("Cidade, Rua, n°, complemento");
     list.add(c1);
     }
 return list;

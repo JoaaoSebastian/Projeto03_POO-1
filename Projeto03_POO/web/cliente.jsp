@@ -9,6 +9,8 @@
         <link rel="stylesheet" type="text/css" href="css.css">
     </head>
     <body>
+        <script>
+</script>
         <h1>Clientes</h1>
            <%
             try{
@@ -38,20 +40,21 @@
             }catch(Exception ex){
     %>
         <div>Erro ao processar form! </div>
-        <%}%>   
+        <%} 
+        %>   
         <section id="addCliente">    
             <h2>Adicionar novo Cliente:</h2>
             <form>
                 <label>Nome:</label>
                 <input type="text" name="nome" required/><br/>
                 <label>CPF:</label>
-                <input type="text" name="cpf"/><br/>
+                <input type="text" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx"/><br/>
                 <label>RG:</label>
-                <input type="text" name="rg"/><br/>
+                <input type="text" name="rg"  pattern="\d{2}\.\d{3}\.\d{3}-\d{1}" placeholder="xx.xxx.xxx-x"/><br/>
                 <label>Email:</label>
                 <input type="text" name="email"/><br/>
                 <label>Telefone:</label>
-                <input type="text" name="telefone"/><br/>
+                <input type="text" name="telefone" pattern="\(\d{2}\)\d{4}-\d{4}" placeholder="(xx)xxxx-xxxx" /><br/>
                 <label>Endereço:</label>
                 <input type="text" name="endereco"/><br/>
                 <input type="submit" name="add" value="Adicionar"/>
@@ -70,7 +73,7 @@
                 <th class="dif">Alteração</th>
                 <th>Exclusão</th>
             </tr>
-         <h2>Lista de Clientes</h2>
+            <h2>Lista de Clientes</h2><br/>
             <%try{%>
         <%int i=0;%>
         <%for(Cliente c: Cliente.getList()){%>

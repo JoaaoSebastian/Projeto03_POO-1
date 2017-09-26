@@ -40,25 +40,25 @@
                  %><div>Erro ao processar form! </div>
             <%}%>
             <section id="addCliente">
-            <h2>Novo Fornecedor</h2>
+            <h2>Adicionar novo Fornecedor:</h2>
             <form>
                 <label>Empresa:</label>
                 <input type="text" name="nome" required/><br/>
                 <label>Razão Social:</label>
                 <input type="text" name="razao"/><br/>
                 <label>CNPJ:</label>
-                <input type="text" name="cnpj" /><br/>
+                <input type="text" name="cnpj" pattern="\d{2}.\d{3}.\d{3}\/\d{4}-\d{2}" placeholder="xx.xxx.xxx/xxxx-xx" /><br/>
                 <label>Email:</label>
                 <input type="text" name="email"/><br/>
                 <label>Telefone:</label>
-                <input type="text" name="telefone"/><br/>
+                <input type="text" name="telefone" pattern="\(\d{2}\)\d{4}-\d{4}" placeholder="(xx)xxxx-xxxx"/><br/>
                 <label>Endereço:</label>
                 <input type="text" name="endereco"/><br/>
                 <input type="submit" name="add" value="Adicionar"/>
             </form>
             </section>
             <section id="cliente">
-         <h2>Lista de Fornecedores</h2>
+                <h2>Lista de Fornecedores</h2><br/>
             <table border ="1" cellpadding="5px" cellspacing="0" ID="alter">
             <tr>
                 <th>Índice</th>
